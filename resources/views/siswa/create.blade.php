@@ -33,9 +33,9 @@
         <label>Kelas</label><br>
         <select name="kelas">
             <option value="">Pilih Kelas</option>
-            <option value="X RPL 1">X RPL 1</option>
-            <option value="X RPL 2">X RPL 2</option>
-            <option value="X TKJ 1">X TKJ 1</option>
+            <option value="X RPL 1">X</option>
+            <option value="X RPL 2">XI</option>
+            <option value="X TKJ 1">XII</option>
         </select>
         <br><br>
 
@@ -44,6 +44,11 @@
             <option value="">Pilih Jurusan</option>
             <option value="RPL">RPL</option>
             <option value="TKJ">TKJ</option>
+            <option value="TKJ">TB</option>
+            <option value="TKJ">TPSB</option>
+            <option value="TKJ">TKR</option>
+            <option value="TKJ">TP</option>
+            <option value="TKJ">TEI</option>
         </select>
         <br><br>
 

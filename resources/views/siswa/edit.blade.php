@@ -32,9 +32,9 @@
 
         <label>Kelas</label><br>
         <select name="kelas">
-            <option value="X RPL 1" {{ $siswa->kelas == 'X RPL 1' ? 'selected' : '' }}>X RPL 1</option>
-            <option value="X RPL 2" {{ $siswa->kelas == 'X RPL 2' ? 'selected' : '' }}>X RPL 2</option>
-            <option value="X TKJ 1" {{ $siswa->kelas == 'X TKJ 1' ? 'selected' : '' }}>X TKJ 1</option>
+            <option value="X" {{ $siswa->kelas == 'X' ? 'selected' : '' }}>X</option>
+            <option value="XI" {{ $siswa->kelas == 'XI' ? 'selected' : '' }}>XI</option>
+            <option value="XII" {{ $siswa->kelas == 'XII' ? 'selected' : '' }}>XII</option>
         </select>
         <br><br>
 
@@ -42,6 +42,11 @@
         <select name="jurusan">
             <option value="RPL" {{ $siswa->jurusan == 'RPL' ? 'selected' : '' }}>RPL</option>
             <option value="TKJ" {{ $siswa->jurusan == 'TKJ' ? 'selected' : '' }}>TKJ</option>
+            <option value="TB" {{ $siswa->jurusan == 'TB' ? 'selected' : '' }}>TB</option>
+            <option value="TPSB" {{ $siswa->jurusan == 'TPSB' ? 'selected' : '' }}>TPSB</option>
+            <option value="TKR" {{ $siswa->jurusan == 'TKR' ? 'selected' : '' }}>TKR</option>
+            <option value="TP" {{ $siswa->jurusan == 'TP' ? 'selected' : '' }}>TP</option>
+            <option value="TEI" {{ $siswa->jurusan == 'TEI' ? 'selected' : '' }}>TEI</option>
         </select>
         <br><br>
 
