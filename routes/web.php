@@ -7,5 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/siswa/create', [SiswaController::class, 'create']);
+Route::post('/siswa', [SiswaController::class, 'store']);
+
 Route::get('/siswa/{id}/edit', [SiswaController::class, 'edit']);
 Route::put('/siswa/{id}', [SiswaController::class, 'update']);
