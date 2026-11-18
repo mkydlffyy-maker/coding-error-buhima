@@ -50,6 +50,10 @@
         </select>
         <br><br>
 
+        <label>Alamat</label><br>
+        <textarea name='alamat'></textarea>
+        <br><br>
+
         <button type="submit">Update Data</button>
     </form>
 

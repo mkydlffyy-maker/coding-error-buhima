@@ -23,11 +23,11 @@
         @csrf
 
         <label>NIS</label><br>
-        <input type="text" name="nis">
+        <input type="text" name="nis" placeholder="Masukkan NIS">
         <br><br>
 
         <label>Nama</label><br>
-        <input type="text" name="nama">
+        <input type="text" name="nama"  placeholder="Masukkan Nama">
         <br><br>
 
         <label>Kelas</label><br>
@@ -50,6 +50,10 @@
             <option value="TP">TP</option>
             <option value="TEI">TEI</option>
         </select>
+        <br><br>
+
+        <label>Alamat</label><br>
+        <textarea name='alamat' placeholder='Masukkan alamay'></textarea>
         <br><br>
 
         <button type="submit">Simpan Data</button>
