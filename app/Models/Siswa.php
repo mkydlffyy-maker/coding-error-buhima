@@ -11,6 +11,7 @@ class Siswa extends Model
         'nis',
         'nama',
         'kelas',
-        'jurusan'
+        'jurusan',
+        'alamat'
     ];
 }

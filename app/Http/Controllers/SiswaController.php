@@ -14,17 +14,19 @@ class SiswaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nis' => 'required|unique:siswas,nis',
-            'nama' => 'required',
-            'kelas' => 'required',
-            'jurusan' => 'required'
+            'nis' => 'required|max:20|unique:siswas,nis',
+            'nama' => 'required|max:100',
+            'kelas' => 'required|in:X,XI,XII',
+            'jurusan' => 'required|in:RPL,TKJ,TB,TPSB,TKR,TP,TEI',
+            'alamat' => 'nullable|max:150'
         ]);
 
         Siswa::create([
             'nis' => $request->nis,
             'nama' => $request->nama,
             'kelas' => $request->kelas,
-            'jurusan' => $request->jurusan
+            'jurusan' => $request->jurusan,
+            'alamat' => $request->alamat
         ]);
 
         return redirect('/siswa/create')
@@ -43,17 +45,19 @@ class SiswaController extends Controller
         $siswa = Siswa::findOrFail($id);
 
         $request->validate([
-            'nis' => 'required|unique:siswas,nis,' . $id,
-            'nama' => 'required',
-            'kelas' => 'required',
-            'jurusan' => 'required'
+            'nis' => 'required|max:20|unique:siswas,nis,' . $siswa->id,
+            'nama' => 'required|max:100',
+              'kelas' => 'required|in:X,XI,XII',
+            'jurusan' => 'required|in:RPL,TKJ,TB,TPSB,TKR,TP,TEI',
+            'alamat' => 'nullable|max:150'
         ]);
 
         $siswa->update([
             'nis' => $request->nis,
             'nama' => $request->nama,
             'kelas' => $request->kelas,
-            'jurusan' => $request->jurusan
+            'jurusan' => $request->jurusan,
+            'alamat' => $request->alamat
         ]);
 
         return redirect('/siswa/' . $id . '/edit')
